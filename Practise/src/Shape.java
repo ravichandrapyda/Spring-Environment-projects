@@ -12,7 +12,7 @@ class  Rectangle implements Shape{
 
     public void area(){
 
-        System.out.println(R*S);
+        System.out.println("Prints the are");
 
     }
 
