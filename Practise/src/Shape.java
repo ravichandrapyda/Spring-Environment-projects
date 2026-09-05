@@ -31,6 +31,7 @@ public class Shape{
 
         System.out.println(obj.PayPal());
         obj1.PaymentDone();
+        obj.CreditCard();
 
     }
 }
