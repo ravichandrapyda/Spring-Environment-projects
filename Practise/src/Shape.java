@@ -1,24 +1,36 @@
+interface  PaymentMethod{
 
-
-interface Shape{
-
-    void area();
-    void perimeter();
-
+    void CreditCard();
+    String PayPal();
 }
 
-class  Rectangle implements Shape{
+interface ProcessPayment{
 
+ void PaymentDone();
+}
 
-    public void area(){
+class Yes implements PaymentMethod,ProcessPayment{
+     public void CreditCard(){
 
-        System.out.println("Prints the are");
+         System.out.println(" Yes this credit card is revouklt");
+     }
+     public String PayPal(){
 
-    }
+         return "it is linked to paypal";
+     }
+     public void PaymentDone(){
 
-    public void perimeter(){
+         System.out.println("Yes the payment is done");
+     }
+}
+public class Shape{
+    public static void main(String[] args){
 
+        PaymentMethod obj = new Yes();
+        ProcessPayment obj1 = new Yes();
 
+        System.out.println(obj.PayPal());
+        obj1.PaymentDone();
 
     }
 }
